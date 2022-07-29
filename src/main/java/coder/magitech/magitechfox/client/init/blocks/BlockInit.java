@@ -1,7 +1,7 @@
 package coder.magitech.magitechfox.client.init.blocks;
 
 import coder.magitech.magitechfox.REFERENCE;
-import coder.magitech.magitechfox.client.init.Tab;
+import coder.magitech.magitechfox.client.init.WolvesTab;
 import coder.magitech.magitechfox.client.init.items.ItemInit;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,6 +27,6 @@ public class BlockInit {
     }
 
     private static <T extends Block> void registerBlockItem(String name, Supplier<T> block) {
-        ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(Tab.instance1)));
+        ItemInit.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(WolvesTab.instance1)));
     }
 }
